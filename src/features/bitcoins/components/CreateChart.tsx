@@ -10,6 +10,7 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import revenueData from "../data/revenueData.json";
+import { CryptIcon, CurrencyCode } from "@/components/Elements";
 
 ChartJS.register(
   CategoryScale,
@@ -52,9 +53,14 @@ const data = {
   ],
 };
 export const CreateChart = () => {
+  const chartStyle = {
+    width: "50rem",
+    height: "65rem",
+  };
   return (
     <div>
-      <Line options={options} data={data} />
+      <CryptIcon currencyCode={CurrencyCode.BTC} />
+      <Line options={options} data={data} style={chartStyle} />
     </div>
   );
 };
