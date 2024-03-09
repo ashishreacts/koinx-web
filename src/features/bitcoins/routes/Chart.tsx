@@ -1,6 +1,7 @@
 import { ContentLayout } from "@/components/Layout";
 import { CreateChart } from "../components/CreateChart";
 import { Grid, Paper, styled } from "@mui/material";
+import { CreateTabs } from "../components/CreateTabs";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -16,18 +17,20 @@ export const Chart = () => {
       <div>
         <div>
           <Grid container sx={{ width: "90rem" }} spacing={2}>
-            <Grid item xs={6}>
+            <Grid item xs={7}>
               <Paper>
                 <CreateChart />
               </Paper>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={5}>
               <Item>Content 1 - Column 2</Item>
             </Grid>
-            <Grid item xs={6}>
-              <Item>Content 1 - Column 1</Item>
+            <Grid item xs={7}>
+              <Item>
+                <CreateTabs />
+              </Item>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={5}>
               <Item>Content 1 - Column 2</Item>
             </Grid>
             <Grid item xs={6}>

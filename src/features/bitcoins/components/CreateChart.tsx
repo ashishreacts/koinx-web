@@ -54,8 +54,8 @@ const data = {
 };
 export const CreateChart = () => {
   const chartStyle = {
-    width: "50rem",
-    height: "65rem",
+    width: "40rem",
+    height: "40rem",
   };
   return (
     <div>
