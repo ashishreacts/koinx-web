@@ -5,23 +5,76 @@ import { Divider, Grid, LinearProgress } from "@mui/material";
 
 export const CreateLinearBar = ({ value }: { value: number }) => {
   return (
-    <Box sx={{ position: "relative", width: "100%" }}>
-      <LinearProgress color="success" variant="determinate" value={value} />
-      <Box
-        sx={{
-          position: "absolute",
-          left: `calc(${value}% - 12px)`,
-          top: "100%",
-          transform: "translateY(-50%)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          marginTop: "3px",
-        }}
-      >
-        <ArrowDropUpIcon style={{ fontSize: 24, color: "black" }} />
+    <>
+      <Box sx={{ position: "relative", width: "100%" }}>
+        <Typography
+          variant="h5"
+          component="h1"
+          sx={{ display: "flex", justifyContent: "flex-start", mt: 1 }}
+        >
+          Performance
+        </Typography>
+
+        <Grid container spacing={2}>
+          <Grid item xs={2}>
+            <div style={{ width: "7rem" }}>
+              <div>Today's Low</div>
+              <div>46,930.22</div>
+            </div>
+          </Grid>
+          <Grid item xs={8}>
+            <LinearProgress
+              color="success"
+              variant="determinate"
+              value={value}
+              sx={{ width: "30rem", mt: 2 }}
+            />
+            <Box
+              sx={{
+                position: "absolute",
+                left: `calc(${value}% - 12px)`,
+                top: "70%",
+                transform: "translateY(-50%)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginTop: "3px",
+              }}
+            >
+              <ArrowDropUpIcon style={{ fontSize: 24, color: "black" }} />
+            </Box>
+          </Grid>
+          <Grid item xs={2}>
+            <div style={{ width: "7rem" }}>
+              <div>Today's High</div>
+              <div>49,343.83</div>
+            </div>
+          </Grid>
+        </Grid>
       </Box>
 
+      <Grid container spacing={2}>
+        <Grid item xs={2}>
+          <div style={{ width: "7rem" }}>
+            <div>52W Low</div>
+            <div>16,930.22</div>
+          </div>
+        </Grid>
+        <Grid item xs={8}>
+          <LinearProgress
+            color="success"
+            variant="determinate"
+            // value={value}
+            sx={{ width: "30rem", mt: 2 }}
+          />
+        </Grid>
+        <Grid item xs={2}>
+          <div style={{ width: "7rem" }}>
+            <div>52W High</div>
+            <div>49,743.83</div>
+          </div>
+        </Grid>
+      </Grid>
       <Typography
         component="h1"
         variant="h6"
@@ -118,6 +171,6 @@ export const CreateLinearBar = ({ value }: { value: number }) => {
           </span>
         </Grid>
       </Grid>
-    </Box>
+    </>
   );
 };

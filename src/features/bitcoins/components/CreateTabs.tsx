@@ -59,7 +59,7 @@ export const CreateTabs = () => {
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        <CreateLinearBar value={0} />
+        <CreateLinearBar value={80} />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
         Fundamentals
