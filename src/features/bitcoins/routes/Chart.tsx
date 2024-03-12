@@ -1,10 +1,15 @@
 import { ContentLayout } from "@/components/Layout";
-import { CreateChart } from "../components/CreateChart";
 import { Grid, Paper, styled } from "@mui/material";
+import { AboutBitcoin } from "../components/AboutBitcoin";
+import { CreateChart } from "../components/CreateChart";
 import { CreateTabs } from "../components/CreateTabs";
+import { Team } from "../components/Team";
+import { Tokenomics } from "../components/Tokenomics";
+import { SidebarContent } from "../components/SidebarContent";
+import { TreadingCoins } from "../components/TreadingCoins";
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+  backgroundColor: theme.palette.mode === "dark" ? "#1A2029" : "#fff",
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: "center",
@@ -14,39 +19,60 @@ const Item = styled(Paper)(({ theme }) => ({
 export const Chart = () => {
   return (
     <ContentLayout title="Chart">
-      <div>
-        <div>
-          <Grid container sx={{ width: "90rem" }} spacing={2}>
-            <Grid item xs={7}>
-              <Paper>
-                <CreateChart />
-              </Paper>
-            </Grid>
-            <Grid item xs={5}>
-              <Item>Content 1 - Column 2</Item>
-            </Grid>
-            <Grid item xs={7}>
-              <Item>
-                <CreateTabs />
-              </Item>
-            </Grid>
-            <Grid item xs={5}>
-              <Item>Content 1 - Column 2</Item>
-            </Grid>
-            <Grid item xs={6}>
-              <Item>Content 1 - Column 1</Item>
-            </Grid>
-            <Grid item xs={6}>
-              <Item>Content 1 - Column 2</Item>
-            </Grid>
-            <Grid item xs={6}>
-              <Item>Content 1 - Column 1</Item>
-            </Grid>
-            <Grid item xs={6}>
-              <Item>Content 1 - Column 2</Item>
-            </Grid>
+      <div style={{ width: "93.9vw" }}>
+        <Grid container sx={{ width: "90rem" }} spacing={2}>
+          <Grid item xs={9}>
+            <Paper>
+              <CreateChart />
+            </Paper>
           </Grid>
-        </div>
+          <Grid item xs={3}>
+            <Paper sx={{ backgroundColor: "#006CFF" }}>
+              <SidebarContent />
+            </Paper>
+            <Paper sx={{ mt: 2 }}>
+              <TreadingCoins />
+            </Paper>
+          </Grid>
+          <Grid item xs={9}>
+            <Paper>
+              <CreateTabs />
+            </Paper>
+          </Grid>
+          <Grid item xs={3}>
+            <Item>Content 1 - Column 2</Item>
+          </Grid>
+          <Grid item xs={9}>
+            <Item>Content 1 - Column 1</Item>
+          </Grid>
+          <Grid item xs={3}>
+            <Item>Content 1 - Column 2</Item>
+          </Grid>
+          <Grid item xs={9}>
+            <Paper>
+              <AboutBitcoin />
+            </Paper>
+          </Grid>
+          <Grid item xs={3}>
+            <Item>Content 1 - Column 2</Item>
+          </Grid>
+          <Grid item xs={9}>
+            <Paper>
+              <Tokenomics />
+            </Paper>
+          </Grid>
+          <Grid item xs={3}>
+            <Item>Content 1 - Column 2</Item>
+          </Grid>
+          <Grid item xs={9}>
+            <Paper>
+              <Team />
+            </Paper>
+          </Grid>
+          <Grid item xs={3}>
+            <Item>Content 1 - Column 2</Item>
+          </Grid>
+        </Grid>
       </div>
     </ContentLayout>
   );
