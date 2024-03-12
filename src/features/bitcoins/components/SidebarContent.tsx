@@ -25,9 +25,15 @@ export const SidebarContent = () => {
       />
       <Button
         variant="contained"
-        sx={{ backgroundColor: "white", color: "inherit", ml: 12, mb: 1 }}
+        sx={{
+          backgroundColor: "white",
+          color: "inherit",
+          ml: 6,
+          mb: 1,
+          textTransform: "initial",
+        }}
       >
-        Check Now <ArrowForward />
+        Get Started For FREE <ArrowForward />
       </Button>
     </div>
   );

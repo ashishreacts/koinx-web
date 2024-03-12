@@ -1,4 +1,4 @@
-import { Typography } from "@/components/Elements";
+import { CryptIcon, CurrencyCode, Typography } from "@/components/Elements";
 import { ArrowDropUp } from "@mui/icons-material";
 import { Grid } from "@mui/material";
 
@@ -14,23 +14,10 @@ export const TreadingCoins = () => {
           xs={12}
           sx={{ display: "flex", justifyContent: "space-between" }}
         >
-          <span>Ethereum(ETH)</span>
-          <span
-            style={{
-              color: "green",
-              backgroundColor: "rgb(98, 247, 84, 0.16)",
-            }}
-          >
-            <ArrowDropUp sx={{ verticalAlign: "middle" }} />
-            8.21%
+          <span>
+            <CryptIcon currencyCode={CurrencyCode.BTC} />
+            Bitcoin (BTC)
           </span>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          sx={{ display: "flex", justifyContent: "space-between" }}
-        >
-          <span>Bitcoin (BTC)</span>
           <span
             style={{
               color: "green",
@@ -46,7 +33,10 @@ export const TreadingCoins = () => {
           xs={12}
           sx={{ display: "flex", justifyContent: "space-between" }}
         >
-          <span>Polygon (MATIC)</span>
+          <span>
+            <CryptIcon currencyCode={CurrencyCode.BTC} />
+            Bitcoin (BTC)
+          </span>
           <span
             style={{
               color: "green",
@@ -54,7 +44,26 @@ export const TreadingCoins = () => {
             }}
           >
             <ArrowDropUp sx={{ verticalAlign: "middle" }} />
-            4.32%
+            5.26%
+          </span>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sx={{ display: "flex", justifyContent: "space-between" }}
+        >
+          <span>
+            <CryptIcon currencyCode={CurrencyCode.BTC} />
+            Bitcoin (BTC)
+          </span>
+          <span
+            style={{
+              color: "green",
+              backgroundColor: "rgb(98, 247, 84, 0.16)",
+            }}
+          >
+            <ArrowDropUp sx={{ verticalAlign: "middle" }} />
+            5.26%
           </span>
         </Grid>
       </Grid>

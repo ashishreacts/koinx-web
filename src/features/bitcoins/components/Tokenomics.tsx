@@ -18,7 +18,7 @@ export const Tokenomics = () => {
   };
 
   return (
-    <div>
+    <div style={{ padding: "1rem" }}>
       <Typography component="h1" variant="h5">
         Tokenomics
       </Typography>

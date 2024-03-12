@@ -3,9 +3,9 @@ import { Grid, Paper, styled } from "@mui/material";
 import { AboutBitcoin } from "../components/AboutBitcoin";
 import { CreateChart } from "../components/CreateChart";
 import { CreateTabs } from "../components/CreateTabs";
+import { SidebarContent } from "../components/SidebarContent";
 import { Team } from "../components/Team";
 import { Tokenomics } from "../components/Tokenomics";
-import { SidebarContent } from "../components/SidebarContent";
 import { TreadingCoins } from "../components/TreadingCoins";
 
 const Item = styled(Paper)(({ theme }) => ({
